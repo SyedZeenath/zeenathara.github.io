@@ -687,6 +687,7 @@
   closeBtn.addEventListener('click', closeModal);
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
   
+
   // CV Modal
   function openCVModal() {
     const cvModal = document.getElementById('cv-modal');
@@ -700,10 +701,20 @@
     document.body.style.overflow = '';
   }
   
-  document.getElementById('cv-modal-backdrop')?.addEventListener('click', closeCVModal);
-  document.getElementById('cv-modal-x')?.addEventListener('click', closeCVModal);
-  document.addEventListener('keydown', function(e) { 
-    if (e.key === 'Escape' && document.getElementById('cv-modal').classList.contains('active')) closeCVModal(); 
+  // Wait for DOM to be ready before attaching listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    const cvBackdrop = document.getElementById('cv-modal-backdrop');
+    const cvCloseBtn = document.getElementById('cv-modal-x');
+    
+    if (cvBackdrop) cvBackdrop.addEventListener('click', closeCVModal);
+    if (cvCloseBtn) cvCloseBtn.addEventListener('click', closeCVModal);
+    
+    document.addEventListener('keydown', function(e) { 
+      const cvModal = document.getElementById('cv-modal');
+      if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
+        closeCVModal(); 
+      }
+    });
   });
 </script>
 
