@@ -1,0 +1,138 @@
+.section {
+  background: #030303;
+  padding: 120px 0 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.labelLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #FF6B35;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #FF6B35;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 5vw;
+  align-items: start;
+}
+
+/* Bio column */
+.bioCol {}
+
+.heading {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  font-weight: 300;
+  line-height: 1.22;
+  color: #ffffff;
+  margin: 0 0 2rem;
+  letter-spacing: -0.02em;
+}
+
+.headingAccent {
+  font-style: normal;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+.bioParagraphs {
+  border-left: 1px solid rgba(255, 107, 53, 0.3);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.para {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.78;
+  color: rgba(255, 255, 255, 0.58);
+  margin: 0;
+}
+
+/* Stats column */
+.statsCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.statCard:hover {
+  border-color: rgba(255, 107, 53, 0.3);
+  background: rgba(255, 107, 53, 0.04);
+}
+
+.statValue {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: #FF6B35;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.40);
+  line-height: 1.35;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .statsCol {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 80px 0 70px; }
+
+  .statsCol {
+    grid-template-columns: 1fr 1fr;
+  }
+}

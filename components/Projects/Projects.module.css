@@ -1,0 +1,203 @@
+.section {
+  background: #030303;
+  padding: 110px 0 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.labelLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #FF6B35;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #FF6B35;
+}
+
+/* Featured 2-col grid */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Rest 3-col grid */
+.restGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Base card */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: border-color 0.28s ease, background 0.28s ease, transform 0.28s ease;
+  cursor: default;
+}
+
+.card:hover {
+  border-color: rgba(255, 107, 53, 0.28);
+  background: rgba(255, 107, 53, 0.025);
+  transform: translateY(-3px);
+}
+
+.cardLarge { padding: 2.2rem; }
+
+/* Card top row */
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cardLabel {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.635rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 107, 53, 0.75);
+}
+
+/* Watch button */
+.watchBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.665rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.70);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 0.38rem 0.85rem;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+  flex-shrink: 0;
+}
+
+.watchBtn:hover {
+  background: rgba(255, 107, 53, 0.18);
+  border-color: rgba(255, 107, 53, 0.45);
+  color: #FF6B35;
+}
+
+/* Title */
+.cardTitle {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(0.98rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.32;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.cardLarge .cardTitle {
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+}
+
+/* Description */
+.cardDesc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: clamp(0.80rem, 0.95vw, 0.88rem);
+  font-weight: 300;
+  line-height: 1.70;
+  color: rgba(255, 255, 255, 0.48);
+  margin: 0;
+  flex: 1;
+}
+
+/* Tech chips */
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.chip {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.40);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 0.22rem 0.55rem;
+}
+
+/* Outcome line */
+.outcome {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.outcomeDot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #FF6B35;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .restGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .section { padding: 80px 0 70px; }
+
+  .featuredGrid,
+  .restGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card { padding: 1.4rem; }
+  .cardLarge { padding: 1.6rem; }
+}
