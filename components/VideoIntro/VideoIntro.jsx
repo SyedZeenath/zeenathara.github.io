@@ -52,7 +52,7 @@ export default function VideoIntro({ videoSrc = "/hero-video.mp4" }) {
   const scrollRef    = useRef(null);
   const soundRef     = useRef(null);
 
-  const [isMuted,   setIsMuted]   = useState(true);
+  const [isMuted,   setIsMuted]   = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [soundHint, setSoundHint] = useState(true);
 
@@ -123,7 +123,7 @@ export default function VideoIntro({ videoSrc = "/hero-video.mp4" }) {
     if (!video) return;
     video.muted = false;
     video.play().catch(() => {
-      // Browser blocked unmuted autoplay — user must interact first
+      // Browser blocked unmuted autoplay - user must interact first
       video.muted = true;
       setIsMuted(true);
     });

@@ -2,20 +2,17 @@
   background: #030303;
   padding: 120px 0 100px;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 6vw;
 }
-
 .labelRow {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 3.5rem;
 }
-
 .labelLine {
   display: block;
   width: 40px;
@@ -23,7 +20,6 @@
   background: #FF6B35;
   flex-shrink: 0;
 }
-
 .label {
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.68rem;
@@ -32,17 +28,13 @@
   text-transform: uppercase;
   color: #FF6B35;
 }
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 320px;
   gap: 5vw;
   align-items: start;
 }
-
-/* Bio column */
 .bioCol {}
-
 .heading {
   font-family: var(--font-display, "Space Grotesk", sans-serif);
   font-size: clamp(1.9rem, 3.2vw, 3rem);
@@ -52,21 +44,19 @@
   margin: 0 0 2rem;
   letter-spacing: -0.02em;
 }
-
 .headingAccent {
   font-style: normal;
   font-weight: 700;
   color: #FF6B35;
 }
-
 .bioParagraphs {
   border-left: 1px solid rgba(255, 107, 53, 0.3);
   padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  margin-bottom: 2rem;
 }
-
 .para {
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: clamp(0.9rem, 1.1vw, 1rem);
@@ -76,13 +66,45 @@
   margin: 0;
 }
 
+/* Awards strip */
+.awards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.award {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  transition: border-color 0.22s ease, background 0.22s ease;
+}
+.award:hover {
+  border-color: rgba(255, 107, 53, 0.2);
+  background: rgba(255, 107, 53, 0.04);
+}
+.awardIcon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+.awardText {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.52);
+}
+
 /* Stats column */
 .statsCol {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
 .statCard {
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -93,12 +115,10 @@
   gap: 0.4rem;
   transition: border-color 0.25s ease, background 0.25s ease;
 }
-
 .statCard:hover {
   border-color: rgba(255, 107, 53, 0.3);
   background: rgba(255, 107, 53, 0.04);
 }
-
 .statValue {
   font-family: var(--font-display, "Space Grotesk", sans-serif);
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
@@ -106,8 +126,8 @@
   color: #FF6B35;
   line-height: 1;
   letter-spacing: -0.02em;
+  display: block;
 }
-
 .statLabel {
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.72rem;
@@ -115,24 +135,14 @@
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.40);
   line-height: 1.35;
+  display: block;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .statsCol {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .statsCol { grid-template-columns: repeat(4, 1fr); }
 }
-
 @media (max-width: 600px) {
   .section { padding: 80px 0 70px; }
-
-  .statsCol {
-    grid-template-columns: 1fr 1fr;
-  }
+  .statsCol { grid-template-columns: 1fr 1fr; }
 }

@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────────
    VideoIntro.module.css
-   Cinematic portfolio hero — dark, warm-orange, premium glassmorphism
+   Cinematic portfolio hero - dark, warm-orange, premium glassmorphism
    ─────────────────────────────────────────────────────────────────── */
 
 /* ── Design tokens ─────────────────────────────────────────────────── */
@@ -191,7 +191,7 @@
   gap: 0.04em;
 }
 
-/* Overflow clip container — hides the slide-up animation */
+/* Overflow clip container - hides the slide-up animation */
 .nameClip {
   display: block;
   overflow: hidden;

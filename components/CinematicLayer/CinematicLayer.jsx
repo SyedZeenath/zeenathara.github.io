@@ -6,7 +6,7 @@ import styles from "./CinematicLayer.module.css";
 /**
  * CinematicLayer
  * Three.js warm-orange bokeh particle system with mouse parallax.
- * Renders onto a transparent canvas overlay — additive blending only.
+ * Renders onto a transparent canvas overlay - additive blending only.
  */
 export default function CinematicLayer() {
   const canvasRef = useRef(null);
@@ -93,9 +93,9 @@ export default function CinematicLayer() {
         return { geo, phases, speeds, original: pos.slice() };
       }
 
-      /* Large soft bokeh — 200 particles, low opacity */
+      /* Large soft bokeh - 200 particles, low opacity */
       const big  = buildParticles(200, 150, 100, 80);
-      /* Small sharp sparkles — 500 particles, higher opacity */
+      /* Small sharp sparkles - 500 particles, higher opacity */
       const small = buildParticles(500, 130,  90, 70);
 
       const matBig = new THREE.PointsMaterial({

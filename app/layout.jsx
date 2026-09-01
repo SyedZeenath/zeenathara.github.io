@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Syed Zeenath — Software Engineer",
+  title: "Syed Zeenath - Software Engineer",
   description:
     "Building production LLM systems, digital twins & robotics at the intersection of AI and physical computation.",
 };
@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

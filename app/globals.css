@@ -1,104 +1,18 @@
-/* globals.css */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ── Page transition for case study ─────────────────────────── */
+main { animation: pageIn 0.45s cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-html {
-  scroll-behavior: smooth;
-  /* Prevent text size inflation on iOS */
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background-color: #030303;
-  color: #ffffff;
-  font-family: var(--font-body, "Inter", system-ui, sans-serif);
-  line-height: 1.6;
-  overflow-x: hidden;
-  /* Smooth scrolling feels premium */
-  scroll-behavior: smooth;
-}
-
-/* Remove tap highlight on mobile */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Improve media defaults */
-img,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-/* Remove built-in button styles */
-button {
-  all: unset;
-  cursor: pointer;
-}
-
-/* ── Scrollbar styling (optional, Webkit only) ─────────────────────── */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 107, 53, 0.35);
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 107, 53, 0.65);
-}
-
-/* ── Placeholder next section for scroll testing ───────────────────── */
-#next-section {
-  min-height: 100vh;
-  background: #060606;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.3);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* ── Scroll reveal ─────────────────────────────────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity  0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Scrollbar ─────────────────────────────────────────────────────── */
-::-webkit-scrollbar       { width: 4px; }
+/* ── Custom scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
 ::-webkit-scrollbar-thumb { background: rgba(255,107,53,0.35); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,107,53,0.6); }
 
-/* ── Reduced motion ────────────────────────────────────────────────── */
+/* ── Reduced motion ──────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+  .reveal { transition: none; opacity: 1; transform: none; }
+  main { animation: none; }
 }
