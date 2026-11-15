@@ -210,25 +210,25 @@ export default function VideoIntro({ videoSrc = "/hero-video.mp4" }) {
       {/* ── Layer 5: Hero text content ──────────────────────────────── */}
       <div className={styles.content}>
         <p ref={taglineRef} className={styles.tagline}>
-          Software Engineer &nbsp;·&nbsp; MSc Robotics &amp; Embedded AI
+          Robotics Software &amp; Deployment Engineer &nbsp;·&nbsp; MSc Robotics &amp; Embedded AI
         </p>
 
-        <h1 className={styles.nameBlock} aria-label="Syed Zeenath">
+        <h1 className={styles.nameBlock} aria-label="Zeenath Ara Syed">
           <span className={styles.nameClip}>
             <span ref={firstNameRef} className={`${styles.nameLine} ${styles.nameLight}`}>
-              Syed
+              Zeenath
             </span>
           </span>
           <span className={styles.nameClip}>
             <span ref={lastNameRef} className={`${styles.nameLine} ${styles.nameBold}`}>
-              Zeenath
+              Ara Syed
             </span>
           </span>
         </h1>
 
         <p ref={subtitleRef} className={styles.subtitle}>
-          Building production LLM systems, digital twins &amp; robotics<br />
-          at the intersection of AI and physical computation.
+          Building robot software, simulation and digital twins<br />
+          that work outside the lab.
         </p>
       </div>
 
