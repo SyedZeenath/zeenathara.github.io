@@ -62,7 +62,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`} aria-label="Primary navigation">
       <div className={styles.inner}>
-        <span className={styles.wordmark} aria-hidden="true">SZ</span>
+        <span className={styles.wordmark} aria-hidden="true">ZS</span>
 
         {/* Desktop */}
         <ul className={styles.links} role="list" ref={navListRef}>

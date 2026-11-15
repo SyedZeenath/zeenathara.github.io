@@ -27,13 +27,13 @@ export default function Contact() {
 
         <div ref={ctaRef} className={styles.cta}>
           <h2 className={styles.heading}>
-            Open to founding engineering<br />
-            and <em className={styles.accent}>forward deployed roles.</em>
+            Open to robotics software<br />
+            and <em className={styles.accent}>deployment roles.</em>
           </h2>
           <p className={styles.sub}>
-            Looking for roles where production AI meets real enterprise environments
-            and robot systems - Founding Engineer, Forward Deployed Engineer, and Robotics
-            AI positions across Ireland and Europe. Available now, based in Dublin.
+            Looking for robotics software, deployment, field application and integration
+            roles across Ireland and Europe, including forward deployed robotics roles.
+            Available now, based in Maynooth near Dublin.
           </p>
 
           {/* CV download */}

@@ -66,8 +66,8 @@ export default function About() {
           {/* Bio column */}
           <div ref={bioRef} className={styles.bioCol}>
             <h2 className={styles.heading}>
-              Engineer at the edge of<br />
-              <em className={styles.headingAccent}>AI and the physical world.</em>
+              Robot software that works<br />
+              <em className={styles.headingAccent}>outside the lab.</em>
             </h2>
             <div className={styles.bioParagraphs}>
               {ABOUT.bio.map((p, i) => (

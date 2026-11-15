@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Syed Zeenath - Software Engineer",
+  title: "Zeenath Ara Syed - Robotics Software & Deployment Engineer",
   description:
-    "Building production LLM systems, digital twins & robotics at the intersection of AI and physical computation.",
+    "Robotics software, simulation and digital twins: from a clinical robotic eye simulator to industrial digital twins for Shell, LNG Canada and Con Edison.",
 };
 
 export default function RootLayout({ children }) {
